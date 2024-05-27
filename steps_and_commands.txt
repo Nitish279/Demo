@@ -1,0 +1,25 @@
+mkdir shipit-v2
+cd shipit-v2
+pnpm init
+packages:
+  - 'host'
+  - 'header'
+  - 'footer'
+  - 'templates'
+  - 'job'
+  - 'inventories'
+  - 'repositories'
+  - 'users'
+  - 'keys'
+
+npx create-react-app host --template redux --use-pnpm
+npx create-react-app header --template redux --use-pnpm
+npx create-react-app footer --template redux --use-pnpm
+npx create-react-app templates --template redux --use-pnpm
+npx create-react-app job --template redux --use-pnpm
+npx create-react-app inventories --template redux --use-pnpm
+npx create-react-app repositories --template redux --use-pnpm
+npx create-react-app users --template redux --use-pnpm
+npx create-react-app keys --template redux --use-pnpm
+
+pnpm add @module-federation/webpack @module-federation/webpack-module-federation-library css-loader style-loader babel-loader file-loader -W
