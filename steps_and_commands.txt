@@ -870,3 +870,62 @@ module.exports = merge(commonConfig, {
     modules: [path.resolve(__dirname, "node_modules"), "node_modules"],
   },
 });
+
+
+Hello Alex,
+
+I want to integrate Canopy with my Micro Frontend POC app.
+
+In order to achieve that, I tried installing one of the exposed packages from Canopy, e.g., AppBar.
+
+I added "@acadosoft/app-bar": "^2.15.0" under the dependencies section of my package.json. After that, when I ran pnpm install to install packages, I got the following error:
+
+ERR_PNPM_FETCH_404 GET https://registry.npmjs.org/acadosoft%2fapp-bar: Not Found - 404
+
+I tried seeking help from Srini and other team members, but we have not been able to resolve the issue.
+
+I took the content of Srini's .npmrc and replaced it with mine but still couldn't fix it.
+
+Here are the commands I tried:
+
+pnpm adduser (without the registry URL here)
+pnpm adduser --registry=https://nexus3.acadosoft.net/ --always-auth
+pnpm adduser --registry=https://nexus3.acadosoft.net/repository/npm-group/ --always-auth
+I entered my username, password, and email:
+
+Username: nitish.anand
+Email: nitish.anand@acadosoft.inc
+After entering all this, I got the following errors:
+
+npm ERR! code E400
+npm ERR! 400 Bad Request - PUT https://nexus3.acadosoft.net/-/user/org.couchdb.user:nitish.anand
+npm ERR! A complete log of this run can be found in: /Users/nitish.anand/.pnpm/_logs/2024-06-07T09_24_33_710Z-debug-0.log
+I then tried pnpm login and entered:
+
+Username: nitish.anand
+But I received the error: "username or password was invalid"
+
+Next, I tried:
+4. pnpm login --registry=https://nexus3.acadosoft.net/repository/npm-group --always-auth
+
+It asked for the username and password again:
+
+Username: nitish.anand
+Password: ********
+Upon entering my username and password, I got:
+
+npm ERR! Unable to authenticate, need: BASIC realm="Sonatype Nexus Repository Manager"
+npm ERR! A complete log of this run can be found in: /Users/nitish.anand/.pnpm/_logs/2024-06-07T09_32_33_972Z-debug-0.log
+pnpm whoami
+This shows srini.gowda as I am using Srini's .npmrc content.
+Here is my current .npmrc content:
+
+//nexus3.acadosoft.net/repository/_auth=Token.NpmToken.b87f26ef-7dcb-3a34-a788-54f8a6122036
+@nexus3.acadosoft.net/repository/npm-group/:_authToken=NpmToken.024f0bd4-3bef-35c8-8701-a8e2c1ed0382
+@pnpm:registry=https://registry.npmjs.org
+@pnpm:registry=https://npm.pkg.github.com
+Can you please help me resolve this issue?
+
+Best regards,
+Nitish Anand
+nitish.anand@acadosoft.inc
