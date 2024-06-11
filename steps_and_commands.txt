@@ -871,61 +871,153 @@ module.exports = merge(commonConfig, {
   },
 });
 
+body {
+    font-family: Arial, sans-serif;
+}
 
-Hello Alex,
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+}
 
-I want to integrate Canopy with my Micro Frontend POC app.
+.header-left {
+    display: flex;
+    align-items: center;
+}
 
-In order to achieve that, I tried installing one of the exposed packages from Canopy, e.g., AppBar.
+.logo img {
+    width: 120px;
+}
 
-I added "@acadosoft/app-bar": "^2.15.0" under the dependencies section of my package.json. After that, when I ran pnpm install to install packages, I got the following error:
+.search-bar {
+    margin-left: 20px;
+}
 
-ERR_PNPM_FETCH_404 GET https://registry.npmjs.org/acadosoft%2fapp-bar: Not Found - 404
+.search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
-I tried seeking help from Srini and other team members, but we have not been able to resolve the issue.
+.header-right {
+    display: flex;
+    align-items: center;
+}
 
-I took the content of Srini's .npmrc and replaced it with mine but still couldn't fix it.
+.write-button {
+    margin-right: 20px;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
 
-Here are the commands I tried:
+.notifications-button {
+    margin-right: 20px;
+}
 
-pnpm adduser (without the registry URL here)
-pnpm adduser --registry=https://nexus3.acadosoft.net/ --always-auth
-pnpm adduser --registry=https://nexus3.acadosoft.net/repository/npm-group/ --always-auth
-I entered my username, password, and email:
+.user-menu {
+    position: relative;
+}
 
-Username: nitish.anand
-Email: nitish.anand@acadosoft.inc
-After entering all this, I got the following errors:
+.user-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
-npm ERR! code E400
-npm ERR! 400 Bad Request - PUT https://nexus3.acadosoft.net/-/user/org.couchdb.user:nitish.anand
-npm ERR! A complete log of this run can be found in: /Users/nitish.anand/.pnpm/_logs/2024-06-07T09_24_33_710Z-debug-0.log
-I then tried pnpm login and entered:
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
 
-Username: nitish.anand
-But I received the error: "username or password was invalid"
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
 
-Next, I tried:
-4. pnpm login --registry=https://nexus3.acadosoft.net/repository/npm-group --always-auth
+.user-menu:hover .dropdown-menu {
+    display: block;
+}
 
-It asked for the username and password again:
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
 
-Username: nitish.anand
-Password: ********
-Upon entering my username and password, I got:
+.dropdown-menu .divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 5px 0;
+}
 
-npm ERR! Unable to authenticate, need: BASIC realm="Sonatype Nexus Repository Manager"
-npm ERR! A complete log of this run can be found in: /Users/nitish.anand/.pnpm/_logs/2024-06-07T09_32_33_972Z-debug-0.log
-pnpm whoami
-This shows srini.gowda as I am using Srini's .npmrc content.
-Here is my current .npmrc content:
+.user-email {
+    display: block;
+    padding: 10px 20px;
+    color: #757575;
+}
 
-//nexus3.acadosoft.net/repository/_auth=Token.NpmToken.b87f26ef-7dcb-3a34-a788-54f8a6122036
-@nexus3.acadosoft.net/repository/npm-group/:_authToken=NpmToken.024f0bd4-3bef-35c8-8701-a8e2c1ed0382
-@pnpm:registry=https://registry.npmjs.org
-@pnpm:registry=https://npm.pkg.github.com
-Can you please help me resolve this issue?
+import React from "react";
+import "../styles/Header.css";
 
-Best regards,
-Nitish Anand
-nitish.anand@acadosoft.inc
+const Header = () => {
+  return (
+    <header className="header">
+      <div className="header-left">
+        <a href="/" className="logo">
+          <img
+            src="https://miro.medium.com/v2/resize:fill:64:64/0*nvuSgvH5FZMneH1n."
+            alt="Medium Logo"
+          />
+        </a>
+      </div>
+      <div className="header-right">
+        <div className="user-menu">
+          <button className="user-button">
+            <img
+              src="https://miro.medium.com/v2/resize:fill:64:64/0*nvuSgvH5FZMneH1n."
+              alt="User"
+              className="user-avatar"
+            />
+          </button>
+          <div className="dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Library</a>
+            <a href="#">Stories</a>
+            <a href="#">Stats</a>
+            <div className="divider"></div>
+            <a href="#">Settings</a>
+            <a href="#">Refine recommendations</a>
+            <a href="#">Manage publications</a>
+            <a href="#">Help</a>
+            <div className="divider"></div>
+            <a href="#">Become a Medium member</a>
+            <a href="#">Create a Mastodon account</a>
+            <a href="#">Apply for author verification</a>
+            <a href="#">Apply to the Partner Program</a>
+            <a href="#">Gift a membership</a>
+            <div className="divider"></div>
+            <a href="#">Sign out</a>
+            <span className="user-email">ni•••••••@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
