@@ -1,0 +1,80 @@
+Login
+Dropdown 1: Hard-coded options
+Dropdown 2: Options fetched from an API
+Home Page
+Sections: 6 blocks, each containing an icon with accompanying text
+Templates
+Buttons:
+Create New Template
+Reset (to reset selections)
+Search (to search among templates)
+Reload
+Dropdowns:
+Select Repo
+Select Inventory
+Table:
+Pagination: Previous and Next buttons
+Each template displays:
+Launch, Info, Edit, Copy, and Delete actions
+Template Name, Inventory Name, Repo Name, and Description
+Jobs
+Buttons:
+Search (to search among jobs)
+Reload
+Table:
+Pagination: Previous and Next buttons
+Each job displays:
+Launch and Info actions
+Template Name, Inventory Name, Repo Name, Started At, Started By, and Status
+Inventories
+Buttons:
+Search (to search among inventories)
+Reload
+Table:
+Pagination: Previous and Next buttons
+Each inventory displays:
+Info, Edit, and Delete actions
+Inventory Name, SSH Key Status, Password Protection Status, and Defunct Status
+Repos
+Buttons:
+Search (to search among repos)
+Reload
+Table:
+Pagination: Previous and Next buttons
+Each repo displays:
+Info, Edit, Refresh, and Delete actions
+Repo Name, URL, and Branch
+Users
+Buttons:
+Search (to search among users)
+Reload
+Sync (to sync users from AD group)
+Table:
+Pagination: Previous and Next buttons
+Keys
+Buttons:
+Create New Key
+Search (to search among keys)
+Reload
+Table:
+Pagination: Previous and Next buttons
+Each key displays:
+Info, Edit, Copy, and Delete actions
+Key Name and Purpose
+Info or Details
+Buttons:
+Back
+Reload
+Relaunch
+Table: Displays job details
+Tabs: Displays
+Memes
+Launch Props
+Events
+Stdout
+Stderr
+Launch and Relaunch
+Modal: Docker tag
+Edit
+Similar to Create, but pre-filled values when copied
+Delete
