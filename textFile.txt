@@ -78,3 +78,17 @@ Modal: Docker tag
 Edit
 Similar to Create, but pre-filled values when copied
 Delete
+
+
+
+Login Dropdown 1 hard code and second fetch from Apihome page (6 blocks [Icon with Text])Templates:-Create new Template buttonsselect repo and Inventory dropdownreset button to reset selectionSearch to search among templates 
+Reload ButtonTable with pagination Prev and Nexteach template shown in table will have Launch, info, edit copy and delete actionsalong with Name of template, Inventory Name, Repo Name and Description 
+
+Templates:-Search to search among Jobs 
+Reload ButtonTable with pagination Prev and Nexteach template shown in table will have Launch and info actionsalong with Name of template, Inventory Name, Repo Name stated at, started by and status 
+
+Inventories:-Search to search among Inventories 
+Reload ButtonTable with pagination Prev and Nexteach template shown in table will have info, edit and delete actionsalong with Inventory Name, has SSH key, is password protected  and defunct Repos:-Search to search among repos 
+Reload ButtonTable with pagination Prev and Nexteach template shown in table will have info, edit, refresh and delete actionsalong with repo Name, url  and branch users:-Search to search among users 
+Reload Buttonsync button to sync user from AD groupTable with pagination Prev and Next ..?Keys:-Create new key buttons search among keys 
+Reload ButtonTable with pagination Prev and Nexteach template shown in table will have info, edit copy and delete actionsalong with Name of key and Purpose Info or details Back, reload and relaunch buttonsTable which shows jobs detailtabs that showsMemes, launch props, events, stdout and stderrLunch and re launchModal for docker tagEdit similar to createcopy open create will pre filled value  delete  
