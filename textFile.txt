@@ -92,3 +92,66 @@ Reload ButtonTable with pagination Prev and Nexteach template shown in table wil
 Reload ButtonTable with pagination Prev and Nexteach template shown in table will have info, edit, refresh and delete actionsalong with repo Name, url  and branch users:-Search to search among users 
 Reload Buttonsync button to sync user from AD groupTable with pagination Prev and Next ..?Keys:-Create new key buttons search among keys 
 Reload ButtonTable with pagination Prev and Nexteach template shown in table will have info, edit copy and delete actionsalong with Name of key and Purpose Info or details Back, reload and relaunch buttonsTable which shows jobs detailtabs that showsMemes, launch props, events, stdout and stderrLunch and re launchModal for docker tagEdit similar to createcopy open create will pre filled value  delete  
+
+<div className="icons-grid">
+          <div className="icon-card">
+            <i className="icon templates-icon"></i>
+            <p>Templates</p>
+          </div>
+          <div className="icon-card">
+            <i className="icon jobs-icon"></i>
+            <p>Jobs</p>
+          </div>
+          <div className="icon-card">
+            <i className="icon inventories-icon"></i>
+            <p>Inventories</p>
+          </div>
+          <div className="icon-card">
+            <i className="icon repos-icon"></i>
+            <p>Repos</p>
+          </div>
+          <div className="icon-card">
+            <i className="icon users-icon"></i>
+            <p>Users</p>
+          </div>
+          <div className="icon-card">
+            <i className="icon keys-icon"></i>
+            <p>Keys</p>
+          </div>
+        </div>
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.icon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Placeholder for icons */
+.templates-icon::before { content: '📄'; }
+.jobs-icon::before { content: '📝'; }
+.inventories-icon::before { content: '📦'; }
+.repos-icon::before { content: '📁'; }
+.users-icon::before { content: '👥'; }
+.keys-icon::before { content: '🔑'; }
