@@ -1,78 +1,57 @@
-import React from "react";
-import "./App.css";
+import React, { useState } from "react";
 import {
-  FaRegFileAlt,
-  FaTasks,
-  FaBoxes,
-  FaDatabase,
-  FaUsers,
-  FaKey,
-} from "react-icons/fa";
+  Provider,
+  defaultTheme,
+  lightTheme,
+  darkTheme,
+  Button,
+  Flex,
+} from "@adobe/react-spectrum";
 
-function App() {
+// import NormalButton from "./components/NormalButton";
+// import AriaButton from "./components/AriaButton";
+// import SpectrumButton from "./components/SpectrumButton";
+
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
+
+import "./App.css";
+
+const App = () => {
+  const [theme, setTheme] = useState(defaultTheme);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) =>
+      prevTheme === lightTheme ? darkTheme : lightTheme
+    );
+  };
+
+  // const handleClick = () => {
+  //   alert("Button clicked!");
+  // };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="logo">ACADIA SOFT</div>
-        <nav>
-          <a href="#">HOME</a>
-          <a href="#">TEMPLATES</a>
-          <a href="#">JOBS</a>
-        </nav>
-        <div className="profile">
-          <span>nitish.anand@acadia.inc</span>
-          <a href="#" className="logout">
-            logout
-          </a>
-        </div>
-      </header>
-      <main>
-        <div className="dropdowns">
-          <select>
-            <option>Default Repository</option>
-            {/* Add other options here */}
-          </select>
-          <select>
-            <option>Default Inventory</option>
-            {/* Add other options here */}
-          </select>
-          <button>CLEAR DEFAULT SELECTIONS</button>
-        </div>
-        <div className="icons-grid">
-          <div className="icon-card">
-            <FaRegFileAlt className="icon" />
-            <p>Templates</p>
-            <div className="description">Manage & Launch</div>
-          </div>
-          <div className="icon-card">
-            <FaTasks className="icon" />
-            <p>Jobs</p>
-            <div className="description">View jobs that have run</div>
-          </div>
-          <div className="icon-card">
-            <FaBoxes className="icon" />
-            <p>Inventories</p>
-            <div className="description">Manage Inventories</div>
-          </div>
-          <div className="icon-card">
-            <FaDatabase className="icon" />
-            <p>Repos</p>
-            <div className="description">Manage Repositories</div>
-          </div>
-          <div className="icon-card">
-            <FaUsers className="icon" />
-            <p>Users</p>
-            <div className="description">Manage Users</div>
-          </div>
-          <div className="icon-card">
-            <FaKey className="icon" />
-            <p>Keys</p>
-            <div className="description">Manage Keys</div>
-          </div>
-        </div>
-      </main>
+    <div className="app">
+      {/* <h1>Button Comparison</h1>
+      <h2>Normal Button</h2>
+      <NormalButton onClick={handleClick}>Click Me</NormalButton>
+      <h2>ARIA Button</h2>
+      <AriaButton onClick={handleClick}>Click Me</AriaButton>
+      <h2>Spectrum Button</h2> */}
+      <Provider theme={lightTheme}>
+        {/* <SpectrumButton onClick={handleClick}>Click Me</SpectrumButton> */}
+        <Header />
+        <Flex justifyContent="center" marginY="size-200">
+          <Button variant="primary" onPress={toggleTheme}>
+            Toggle Theme
+          </Button>
+        </Flex>
+        <Main />
+        <Footer />
+      </Provider>
     </div>
   );
-}
+};
 
 export default App;

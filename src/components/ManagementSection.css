@@ -1,0 +1,11 @@
+.management-section {
+    width: 300px;
+    height: 150px;
+    /* Adjust height to accommodate the icon */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+}
