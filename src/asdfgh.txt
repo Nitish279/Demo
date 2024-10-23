@@ -166,3 +166,132 @@ export const SelectPointsComponent: FC<SelectPointsProps> = ({
 };
 
 // https://planning-poker-agile.web.app/game/01JATRTSR987XNHGY1261AQPND
+
+===
+
+
+import React from "react";
+import { Card, CardContent, Typography, Grid } from "@mui/material";
+import { Bar } from "react-chartjs-2";
+
+interface Result {
+  points: number;
+  participants: string[];
+}
+
+interface ResultsSectionProps {
+  results: Result[];
+}
+
+const ResultsSection: React.FC<ResultsSectionProps> = ({ results }) => {
+  // Prepare data for chart
+  const chartData = {
+    labels: results.map((result) => result.points.toString()),
+    datasets: [
+      {
+        label: "Votes",
+        data: results.map((result) => result.participants.length),
+        backgroundColor: "rgba(75, 192, 192, 0.6)",
+        borderColor: "rgba(75, 192, 192, 1)",
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  return (
+    <div style={{ padding: "20px", marginTop: "20px" }}>
+      <Typography
+        variant="h5"
+        style={{ textAlign: "center", marginBottom: "20px" }}
+      >
+        Results
+      </Typography>
+      <Grid container spacing={3} justifyContent="center">
+        <Grid item xs={12} md={6}>
+          <Card variant="outlined">
+            <CardContent>
+              <Typography variant="h6">Voting Summary</Typography>
+              {results.map((result, index) => (
+                <div key={index}>
+                  <Typography variant="subtitle1">
+                    Points: {result.points}
+                  </Typography>
+                  <Typography variant="body2">Participants:</Typography>
+                  <ul
+                    style={{
+                      paddingLeft: "20px",
+                      maxHeight: "100px",
+                      overflowY: "auto",
+                    }}
+                  >
+                    {result.participants.map((participant, idx) => (
+                      <li key={idx}>{participant}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Card variant="outlined">
+            <CardContent>
+              <Typography variant="h6">Votes Chart</Typography>
+              <div style={{ height: "300px" }}>
+                <Bar
+                  data={chartData}
+                  options={{
+                    maintainAspectRatio: false,
+                    scales: {
+                      y: {
+                        beginAtZero: true,
+                        title: {
+                          display: true,
+                          text: "Number of Votes",
+                        },
+                        ticks: {
+                          stepSize: 1,
+                        },
+                      },
+                    },
+                  }}
+                />
+              </div>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+    </div>
+  );
+};
+
+export default ResultsSection;
+
+
+===
+
+
+[
+    {
+        "points": 1,
+        "participants": [
+            "jhvjhv"
+        ]
+    },
+
+i want ResultsSection to handle this type of response 
+    {
+        "points": 2,
+        "participants": [
+            "guiygiy"
+        ]
+    },
+    {
+        "points": 13,
+        "participants": [
+            "jhgfd fuguy",
+            "lkjlkjl iugiu",
+            "bibjh"
+        ]
+    }
+]
