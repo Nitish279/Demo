@@ -1,57 +1,48 @@
+// src/App.js
 import React, { useState } from "react";
 import {
-  Provider,
   defaultTheme,
-  lightTheme,
-  darkTheme,
-  Button,
-  Flex,
+  Provider,
+  Heading,
+  View,
+  Divider,
+  RadioGroup,
+  Radio,
 } from "@adobe/react-spectrum";
+import { customTheme } from "./customThemes";
+import "./spectrum-custom.css";
 
-// import NormalButton from "./components/NormalButton";
-// import AriaButton from "./components/AriaButton";
-// import SpectrumButton from "./components/SpectrumButton";
-
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
-
-import "./App.css";
-
-const App = () => {
-  const [theme, setTheme] = useState(defaultTheme);
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) =>
-      prevTheme === lightTheme ? darkTheme : lightTheme
-    );
-  };
-
-  // const handleClick = () => {
-  //   alert("Button clicked!");
-  // };
+function App() {
+  const themes = [
+    { id: 1, theme: defaultTheme, name: "Default" },
+    { id: 2, theme: customTheme, name: "Custom" },
+  ];
+  const [theme, setTheme] = useState(1);
+  const actualTheme = themes.find((l) => l.id === theme).theme;
 
   return (
-    <div className="app">
-      {/* <h1>Button Comparison</h1>
-      <h2>Normal Button</h2>
-      <NormalButton onClick={handleClick}>Click Me</NormalButton>
-      <h2>ARIA Button</h2>
-      <AriaButton onClick={handleClick}>Click Me</AriaButton>
-      <h2>Spectrum Button</h2> */}
-      <Provider theme={lightTheme}>
-        {/* <SpectrumButton onClick={handleClick}>Click Me</SpectrumButton> */}
-        <Header />
-        <Flex justifyContent="center" marginY="size-200">
-          <Button variant="primary" onPress={toggleTheme}>
-            Toggle Theme
-          </Button>
-        </Flex>
-        <Main />
-        <Footer />
-      </Provider>
-    </div>
+    <Provider theme={actualTheme} height="100%">
+      <View padding="size-200">
+        <RadioGroup label="Theme" value={theme} onChange={setTheme}>
+          {themes.map((theme) => (
+            <Radio key={theme.id} value={theme.id}>
+              {theme.name}
+            </Radio>
+          ))}
+        </RadioGroup>
+        <Divider />
+        <Heading level={1}>This is a h1 heading</Heading>
+        <View
+          UNSAFE_className="spectrum-custom"
+          padding="size-200"
+          backgroundColor="blue-400"
+          color="red-400"
+        >
+          This is some size-200 text, in a blue-400 container
+        </View>
+      </View>
+    </Provider>
   );
-};
+}
 
 export default App;

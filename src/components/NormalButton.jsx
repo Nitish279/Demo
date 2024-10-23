@@ -1,7 +1,16 @@
 import React from "react";
+import { Button } from "@adobe/react-spectrum";
 
-const NormalButton = ({ onClick, children }) => {
-  return <button onClick={onClick}>{children}</button>;
+const NormalButton = ({ label, onPress }) => {
+  return (
+    <Button
+      variant="primary"
+      onPress={onPress}
+      UNSAFE_className="normal-button"
+    >
+      {label}
+    </Button>
+  );
 };
 
 export default NormalButton;

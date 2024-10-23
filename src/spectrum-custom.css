@@ -1,0 +1,13 @@
+/* src/spectrum-custom.css */
+.spectrum-custom--medium {
+    --spectrum-global-dimension-font-size-200: 30px;
+}
+
+.spectrum-custom--medium h1 {
+    font-size: var(--spectrum-global-dimension-font-size-300);
+}
+
+.spectrum-custom--medium .spectrum-custom {
+    background-color: var(--spectrum-global-color-blue-400) !important;
+    color: var(--spectrum-global-color-red-400) !important;
+}
