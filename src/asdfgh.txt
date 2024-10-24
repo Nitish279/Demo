@@ -295,3 +295,126 @@ i want ResultsSection to handle this type of response
         ]
     }
 ]
+
+import React from "react";
+import { Paper, Button, Grid } from "@mui/material";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import ReplayIcon from "@mui/icons-material/Replay";
+import DeleteIcon from "@mui/icons-material/Delete";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import LinkIcon from "@mui/icons-material/Link";
+
+interface GameControllerProps {
+  onReveal: () => void;
+  onRestart: () => void;
+  onDelete: () => void;
+  onExit: () => void;
+  onInvite: () => void;
+}
+
+const GameController: React.FC<GameControllerProps> = ({
+  onReveal,
+  onRestart,
+  onDelete,
+  onExit,
+  onInvite,
+}) => {
+  return (
+    <Paper elevation={3} style={{ padding: "20px", borderRadius: "8px" }}>
+      <Grid container spacing={2} justifyContent="center">
+        <Grid item>
+          <Button
+            variant="outlined"
+            color="primary"
+            onClick={onReveal}
+            sx={{
+              width: "40px",
+              height: "40px",
+              borderRadius: "50%",
+              "&:hover": {
+                border: "2px solid rgba(0, 30, 255, 0.7)", // Blue with opacity on hover
+                backgroundColor: "rgba(0, 30, 255, 0.1)", // Lighten the background color on hover
+              },
+            }}
+          >
+            <VisibilityIcon />
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button
+            variant="outlined"
+            color="primary"
+            onClick={onRestart}
+            sx={{
+              width: "40px",
+              height: "40px",
+              borderRadius: "50%",
+              "&:hover": {
+                border: "2px solid rgba(0, 30, 255, 0.7)",
+                backgroundColor: "rgba(0, 30, 255, 0.1)",
+              },
+            }}
+          >
+            <ReplayIcon />
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button
+            variant="outlined"
+            color="secondary"
+            onClick={onDelete}
+            sx={{
+              width: "40px",
+              height: "40px",
+              borderRadius: "50%",
+              "&:hover": {
+                border: "2px solid rgba(0, 30, 255, 0.7)",
+                backgroundColor: "rgba(0, 30, 255, 0.1)",
+              },
+            }}
+          >
+            <DeleteIcon />
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button
+            variant="outlined"
+            color="primary"
+            onClick={onExit}
+            sx={{
+              width: "40px",
+              height: "40px",
+              borderRadius: "50%",
+              "&:hover": {
+                border: "2px solid rgba(0, 30, 255, 0.7)",
+                backgroundColor: "rgba(0, 30, 255, 0.1)",
+              },
+            }}
+          >
+            <ExitToAppIcon />
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button
+            variant="outlined"
+            color="primary"
+            onClick={onInvite}
+            sx={{
+              width: "40px",
+              height: "40px",
+              borderRadius: "50%",
+              "&:hover": {
+                border: "2px solid rgba(0, 30, 255, 0.7)",
+                backgroundColor: "rgba(0, 30, 255, 0.1)",
+              },
+            }}
+          >
+            <LinkIcon />
+          </Button>
+        </Grid>
+      </Grid>
+    </Paper>
+  );
+};
+
+export default GameController;
