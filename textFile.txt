@@ -155,3 +155,27 @@ Reload ButtonTable with pagination Prev and Nexteach template shown in table wil
 .repos-icon::before { content: '📁'; }
 .users-icon::before { content: '👥'; }
 .keys-icon::before { content: '🔑'; }
+
+
+
+
+Objective 1: Strengthen and Expand Front-End Architecture for Scalable Applications
+
+Description: Collaborate with your team to solidify a new front-end architecture that includes various types of web applications (normal, single-page, server-side rendered, and micro frontends). Focus on clear UI and data separation to enhance flexibility, reusability, and maintainability.
+Expected Outcome: Deliver a refined and documented front-end architecture model that boosts scalability, seamlessly integrates with existing and future applications, and reduces onboarding time and technical debt.
+Objective 2: Advance Micro Frontend Capabilities for Strategic Projects
+
+Description: Develop modular and reusable micro frontend components tailored for high-impact projects like Nexus. Ensure these components are self-contained with dedicated UI and data layers for easy integration across various LSEG applications.
+Expected Outcome: Deliver at least one reusable micro frontend module with comprehensive documentation and integration guides, setting a standard for future projects.
+Objective 3: Promote Knowledge Sharing and Team Onboarding Efficiency
+
+Description: Use your expertise in Stellar UI's build process to conduct knowledge-sharing sessions, helping the team understand key architectural principles and development workflows. Support new hires like Thowfeeq to expedite their onboarding and alignment with team goals.
+Expected Outcome: Conduct at least one in-depth session on Stellar UI's architecture and build process. Assist in onboarding at least one new team member, ensuring they achieve proficiency in foundational tasks within their first month.
+Objective 4: Drive Accessible and User-Centric Component Development with React Spectrum and React Aria
+
+Description: Lead the development of accessible and reusable Canopy2 components using React Spectrum and React Aria. Ensure these components meet high accessibility standards and enhance user experience across applications.
+Expected Outcome: Deliver at least two production-ready, accessible components for Canopy2, complete with usage guidelines and best practices to facilitate seamless integration and promote accessibility compliance.
+Objective 5: Enhance Agile Planning Poker Application for Team Productivity
+
+Description: Improve the Agile Planning Poker application by incorporating team feedback to refine features and usability, aligning the app with Agile planning needs.
+Expected Outcome: Roll out at least one significant feature enhancement or usability improvement to support effective and collaborative planning sessions.
