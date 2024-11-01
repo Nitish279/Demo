@@ -179,3 +179,17 @@ Objective 5: Enhance Agile Planning Poker Application for Team Productivity
 
 Description: Improve the Agile Planning Poker application by incorporating team feedback to refine features and usability, aligning the app with Agile planning needs.
 Expected Outcome: Roll out at least one significant feature enhancement or usability improvement to support effective and collaborative planning sessions.
+
+
+This quarter, I successfully completed my assigned onboarding tasks on time, which enabled me to understand the team’s processes and workflows more effectively. I contributed to the development of micro frontend applications designed for future scalability, specifically targeting projects like Nexus. Additionally, I collaborated with Alex to build a new front-end architecture that includes multiple application types—Normal Web Applications, Single Page Applications, Server-Side Applications, and Micro Frontend Applications—each with its own UI and data layer for enhanced flexibility and modularity.
+
+I also contributed to our component library by working on Canopy2 components using React Spectrum and React Aria, focusing on accessibility and reusability. Moreover, I analyzed the Stellar UI codebase and presented a session to the team explaining its build process and data flow, helping align our understanding and improve our development practices. I supported my colleague, Thowfeeq, during his onboarding, ensuring he was brought up to speed quickly, and developed an Agile Planning Poker app to assist with our team’s planning sessions.
+
+For the next quarter, my focus is on further learning Java to broaden my skill set into backend development, aiming to become a full-stack developer. This will help me contribute more effectively to both frontend and backend tasks, enhancing team collaboration and project outcomes. I also plan to implement feedback-driven improvements in the Agile Planning Poker app. Additionally, I aim to support ongoing knowledge sharing to improve team collaboration and technical expertise.
+
+
+This quarter, I demonstrated LSEG's values through active collaboration and mentorship within the team. By working closely with Alex on front-end architecture and supporting Thowfeeq through his onboarding process, I fostered a collaborative environment and helped new joiners integrate smoothly. I ensured integrity and thoroughness in my work by analyzing the Stellar UI codebase and sharing insights on the build process, data flow, and best practices, increasing the team's transparency and understanding.
+
+I also demonstrated a commitment to innovation and excellence by developing scalable micro frontend applications and accessible Canopy2 components using React Spectrum and React Aria. These contributions align with our goal of building future-ready applications with high accessibility standards.
+
+In the next quarter, I plan to continue embodying these values by engaging in more collaborative projects, such as refining our Agile Planning Poker app based on team feedback and expanding our component library with accessible, reusable components. I will also initiate regular knowledge-sharing sessions further to support team development and alignment with LSEG’s standards. Additionally, I will be learning Java to become a full-stack developer, which will enable me to contribute more effectively to both frontend and backend tasks, enhancing team collaboration and project outcomes.
