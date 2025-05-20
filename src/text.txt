@@ -1,8 +1,0 @@
-Accessibility: 
-    ARIA buttons will have additional ARIA attributes, enhancing accessibility.
-Keyboard Navigation: 
-    ARIA buttons provide consistent keyboard interaction and better focus management.
-Screen Reader Support: 
-    ARIA buttons offer more descriptive context, improving usability for screen reader users.
-Lighthouse Audit: 
-    The audit will likely show higher accessibility scores for ARIA buttons.

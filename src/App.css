@@ -1,48 +1,9 @@
 .app {
-  text-align: center;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 24px;
-}
-
-h2 {
-  font-size: 20px;
-  margin-top: 20px;
-}
-
-
-
-
-
-.custom-flex {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.normal-button {
-  /* Custom styles for the button */
-  background-color: #007bff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #282c34;
   color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.normal-button:hover {
-  background-color: #0056b3;
-}
-
-.normal-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
-}
-
-.normal-button:active {
-  background-color: #004085;
 }
