@@ -2,20 +2,14 @@
 
 export default function UserCard({ user }) {
   return (
-    <div className="asdfgh bg-purple-50 border border-purple-200 rounded-lg p-4 flex flex-col sm:flex-row sm:items-center justify-between shadow-sm hover:shadow-md transition ">
+    <div className="user-card">
       <div>
-        <span className="font-semibold text-lg text-purple-800">
-          {user.name}
-        </span>
-        <span className="ml-2 text-sm text-gray-500">({user.role})</span>
-        <div className="text-gray-600 text-sm">{user.location}</div>
+        <span className="user-name">{user.name}</span>
+        <span className="user-role">({user.role})</span>
+        <div className="user-location">{user.location}</div>
       </div>
-      <div className="mt-2 sm:mt-0">
-        <span
-          className={
-            user.active ? "text-green-600 font-bold" : "text-red-500 font-bold"
-          }
-        >
+      <div>
+        <span className={user.active ? "user-active" : "user-inactive"}>
           {user.active ? "Active" : "Inactive"}
         </span>
       </div>

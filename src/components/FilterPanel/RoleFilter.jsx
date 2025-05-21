@@ -8,7 +8,7 @@ export default function RoleFilter({ users, selected, onSelect }) {
     <select
       value={selected}
       onChange={(e) => onSelect(e.target.value)}
-      className="px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-400 w-full sm:w-48 transition"
+      className="role-filter"
     >
       <option>All</option>
       {roles.map((role) => (
