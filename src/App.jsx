@@ -14,12 +14,10 @@ export default function App() {
   const filtered = useFilteredUsers(users, searchTerm, selectedRole);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-100 flex flex-col items-center py-10">
-      <div className="bg-white shadow-lg rounded-xl p-8 w-full max-w-2xl">
-        <h1 className="text-3xl font-bold text-center text-purple-700 mb-8 tracking-tight">
-          User Directory
-        </h1>
-        <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
+    <div className="app-root">
+      <div className="app-container">
+        <h1 className="app-title">User Directory</h1>
+        <div className="app-filters">
           <SearchBar value={searchTerm} onChange={setSearchTerm} />
           <RoleFilter
             users={users}
