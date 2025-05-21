@@ -2,7 +2,7 @@
 
 export default function UserCard({ user }) {
   return (
-    <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 flex flex-col sm:flex-row sm:items-center justify-between shadow-sm hover:shadow-md transition ">
+    <div className="asdfgh bg-purple-50 border border-purple-200 rounded-lg p-4 flex flex-col sm:flex-row sm:items-center justify-between shadow-sm hover:shadow-md transition ">
       <div>
         <span className="font-semibold text-lg text-purple-800">
           {user.name}
